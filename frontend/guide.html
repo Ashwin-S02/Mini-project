@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leads Scraper | Field Guide</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔍</text></svg>">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="guide-body">
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <main class="container guide-main">
+        <header class="hero">
+            <div class="brand-bar">
+                <a href="index.html" class="brand-info link-reset">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" class="brand-icon" style="color: var(--primary); margin-right: 8px;">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                        <path d="M2 12h20"></path>
+                    </svg>
+                    <span class="brand-name">Leads Scraper</span>
+                </a>
+            </div>
+            <h1 class="brand-tool-name">Field Guide</h1>
+            <p>Understanding the Leads Scraper parameters and lead scoring logic.</p>
+        </header>
+
+        <div class="guide-layout">
+            <!-- Scoring System Section -->
+            <section class="glass-card guide-card">
+                <h2 class="section-title"><span class="gradient-text">Scoring Algorithm</span></h2>
+                <div class="scoring-grid">
+                    <div class="rule-card">
+                        <span class="rule-points">+50</span>
+                        <span class="rule-title">No Website</span>
+                        <p>Highest priority for website development or digital presence services.</p>
+                    </div>
+                    <div class="rule-card">
+                        <span class="rule-points">+20</span>
+                        <span class="rule-title">Missing Email</span>
+                        <p>Opportunity for lead generation and outreach automated systems.</p>
+                    </div>
+                    <div class="rule-card">
+                        <span class="rule-points">+20</span>
+                        <span class="rule-title">Low Rating</span>
+                        <p>Applied when Google Maps rating is below 4.0 (Need for Reputation Mgmt).</p>
+                    </div>
+                    <div class="rule-card">
+                        <span class="rule-points">+30</span>
+                        <span class="rule-title">Missing Socials</span>
+                        <p>Combined points if Instagram (+15) or Facebook (+15) are not found.</p>
+                    </div>
+                    <div class="rule-card">
+                        <span class="rule-points">+20</span>
+                        <span class="rule-title">Professional Gaps</span>
+                        <p>Combined points for missing LinkedIn (+10) or X.com/Twitter (+10).</p>
+                    </div>
+                    <div class="rule-card premium-target">
+                        <span class="rule-points">100</span>
+                        <span class="rule-title">Premium Override</span>
+                        <p>Automated fixed score for "Healthy" businesses with full presence but high growth potential.</p>
+                    </div>
+                </div>
+            </section>
+    
+            <!-- Parameter Definitions Section -->
+            <section class="glass-card guide-card">
+                <h2 class="section-title"><span class="gradient-text">Excel Parameter Definitions</span></h2>
+                <div class="param-list">
+                    <div class="param-item">
+                        <span class="param-name">Business Name</span>
+                        <p>Official name registered on Google Maps.</p>
+                    </div>
+                    <div class="param-item">
+                        <span class="param-name">Type</span>
+                        <p>The primary business category or niche scraped (e.g., HVAC, Dentist).</p>
+                    </div>
+                    <div class="param-item">
+                        <span class="param-name">Scoring</span>
+                        <p>The calculated lead priority score (0-150) based on digital gaps.</p>
+                    </div>
+                    <div class="param-item">
+                        <span class="param-name">Rating</span>
+                        <p>Average star rating from Google Maps reviews.</p>
+                    </div>
+                    <div class="param-item">
+                        <span class="param-name">Phone Number</span>
+                        <p>Direct contact number extracted from listing or website.</p>
+                    </div>
+                    <div class="param-item">
+                        <span class="param-name">Website</span>
+                        <p>Raw URL of the business homepage.</p>
+                    </div>
+                    <div class="param-item">
+                        <span class="param-name">Visit Website</span>
+                        <p>Clickable hyperlink for quickly viewing the lead's current site.</p>
+                    </div>
+                    <div class="param-item">
+                        <span class="param-name">Email</span>
+                        <p>Verified emails scraped from the website contact/about pages.</p>
+                    </div>
+                    <div class="param-item">
+                        <span class="param-name">Social Links (FB, IG, LI, X)</span>
+                        <p>Direct links to official business profiles on major platforms.</p>
+                    </div>
+                    <div class="param-item">
+                        <span class="param-name">Address & Map</span>
+                        <p>Complete physical address and a direct link to the listing on Maps.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="footer-actions">
+            <a href="index.html" class="secondary-btn">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 10px; transform: rotate(180deg);">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+                Back to Dashboard
+            </a>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
