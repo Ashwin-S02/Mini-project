@@ -53,3 +53,8 @@ venv.bak/
 playwright-report/
 test-results/
 CLAUDE.md
+
+# Debug and Scraping Outputs
+*.png
+*.txt
+scraped_leads/

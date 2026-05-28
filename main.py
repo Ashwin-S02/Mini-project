@@ -463,16 +463,43 @@ def extract_place_details(page, maps_url):
             if t.startswith("?") or t.startswith("$"): return False
             return True
         category = ""
-        cat_btn = page.locator('button.DkEaL').first
-        if cat_btn.count() > 0:
-            t = strip_icons(cat_btn.inner_text())
-            if looks_like_category(t): category = t
+        # 1. Try span.mgr77e (modern span selector)
+        cat_span = page.locator('span.mgr77e').first
+        if cat_span.count() > 0:
+            t = strip_icons(cat_span.inner_text())
+            if looks_like_category(t):
+                category = t
+                
+        # 2. Try button.DkEaL (legacy button selector)
+        if not category:
+            cat_btn = page.locator('button.DkEaL').first
+            if cat_btn.count() > 0:
+                t = strip_icons(cat_btn.inner_text())
+                if looks_like_category(t): category = t
+                
+        # 3. Try any button/element with jsaction containing category
         if not category:
             for btn in page.locator('button[jsaction*="category"]').all():
                 t = strip_icons(btn.inner_text())
                 if looks_like_category(t):
                     category = t
                     break
+                    
+        # 4. Sibling/parent inner text parsing next to rating
+        if not category:
+            try:
+                rating_box = page.locator('div.F7nice').first
+                if rating_box.count() > 0:
+                    parent = rating_box.locator('..')
+                    if parent.count() > 0:
+                        text_parts = parent.inner_text().split('\n')
+                        for part in text_parts:
+                            clean = strip_icons(part).strip()
+                            if clean and looks_like_category(clean):
+                                category = clean
+                                break
+            except Exception:
+                pass
                     
         # Extract Rating
         rating = ""

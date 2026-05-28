@@ -5582,3 +5582,191 @@ Traceback (most recent call last):
   File "C:\Users\ashwi\Desktop\mini_pro\brain_map\venv\Lib\site-packages\google\auth\transport\requests.py", line 195, in __call__
     raise new_exc from caught_exc
 google.auth.exceptions.TransportError: HTTPSConnectionPool(host='oauth2.googleapis.com', port=443): Max retries exceeded with url: /token (Caused by NameResolutionError("HTTPSConnection(host='oauth2.googleapis.com', port=443): Failed to resolve 'oauth2.googleapis.com' ([Errno 11001] getaddrinfo failed)"))
+[2026-05-28 12:59:53] [ERROR] [Zone] Failed to extract https://www.google.com/maps/place/Bloomrooms+@+City+Centre/data=!4m10!3m9!1s0x3bae1669e1d52c2d:0xc0a92956ebd3679e!5m2!4m1!1i2!8m2!3d12.9901634!4d77.5948394!16s%2Fg%2F11j1m17rmz!19sChIJLSzV4WkWrjsRnmfT61YpqcA?authuser=0&hl=en&rclk=1: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://www.google.com/maps/place/Bloomrooms+@+City+Centre/data=!4m10!3m9!1s0x3bae1669e1d52c2d:0xc0a92956ebd3679e!5m2!4m1!1i2!8m2!3d12.9901634!4d77.5948394!16s%2Fg%2F11j1m17rmz!19sChIJLSzV4WkWrjsRnmfT61YpqcA?authuser=0&hl=en&rclk=1", waiting until "domcontentloaded"
+
+[2026-05-28 13:03:04] [ERROR] [Sheets] Error appending to Google Sheet: HTTPSConnectionPool(host='sheets.googleapis.com', port=443): Read timed out. (read timeout=None)
+Traceback (most recent call last):
+  File "C:\Users\ashwi\Desktop\mini_pro\brain_map\venv\Lib\site-packages\urllib3\connectionpool.py", line 534, in _make_request
+    response = conn.getresponse()
+  File "C:\Users\ashwi\Desktop\mini_pro\brain_map\venv\Lib\site-packages\urllib3\connection.py", line 571, in getresponse
+    httplib_response = super().getresponse()
+  File "C:\Users\ashwi\anaconda3\Lib\http\client.py", line 1430, in getresponse
+    response.begin()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\ashwi\anaconda3\Lib\http\client.py", line 331, in begin
+    version, status, reason = self._read_status()
+                              ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ashwi\anaconda3\Lib\http\client.py", line 292, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\ashwi\anaconda3\Lib\socket.py", line 719, in readinto
+    return self._sock.recv_into(b)
+           ~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\ashwi\anaconda3\Lib\ssl.py", line 1304, in recv_into
+    return self.read(nbytes, buffer)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\ashwi\anaconda3\Lib\ssl.py", line 1138, in read
+    return self._sslobj.read(len, buffer)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+TimeoutError: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\ashwi\Desktop\mini_pro\brain_map\venv\Lib\site-packages\requests\adapters.py", line 486, in send
+    resp = conn.urlopen(
+        method=request.method,
+    ...<9 lines>...
+        chunked=chunked,
+    )
+  File "C:\Users\ashwi\Desktop\mini_pro\brain_map\venv\Lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+        method, url, error=new_e, _pool=self, _stacktrace=sys.exc_info()[2]
+    )
+  File "C:\Users\ashwi\Desktop\mini_pro\brain_map\venv\Lib\site-packages\urllib3\util\retry.py", line 490, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ashwi\Desktop\mini_pro\brain_map\venv\Lib\site-packages\urllib3\util\util.py", line 39, in reraise
+    raise value
+  File "C:\Users\ashwi\Desktop\mini_pro\brain_map\venv\Lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+        conn,
+    ...<10 lines>...
+        **response_kw,
+    )
+  File "C:\Users\ashwi\Desktop\mini_pro\brain_map\venv\Lib\site-packages\urllib3\connectionpool.py", line 536, in _make_request
+    self._raise_timeout(err=e, url=url, timeout_value=read_timeout)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ashwi\Desktop\mini_pro\brain_map\venv\Lib\site-packages\urllib3\connectionpool.py", line 367, in _raise_timeout
+    raise ReadTimeoutError(
+        self, url, f"Read timed out. (read timeout={timeout_value})"
+    ) from err
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='sheets.googleapis.com', port=443): Read timed out. (read timeout=None)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ashwi\Desktop\mini_pro\brain_map\main.py", line 338, in append_to_sheet
+    set_column_width(worksheet, chr(65 + i), width)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ashwi\Desktop\mini_pro\brain_map\venv\Lib\site-packages\gspread_formatting\functions.py", line 27, in f
+    return worksheet.spreadsheet.batch_update({'requests': func(worksheet, *args, **kwargs)})
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ashwi\Desktop\mini_pro\brain_map\venv\Lib\site-packages\gspread\spreadsheet.py", line 97, in batch_update
+    return self.client.batch_update(self.id, body)
+           ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\ashwi\Desktop\mini_pro\brain_map\venv\Lib\site-packages\gspread\http_client.py", line 134, in batch_update
+    r = self.request("post", SPREADSHEET_BATCH_UPDATE_URL % id, json=body)
+  File "C:\Users\ashwi\Desktop\mini_pro\brain_map\venv\Lib\site-packages\gspread\http_client.py", line 109, in request
+    response = self.session.request(
+        method=method,
+    ...<6 lines>...
+        timeout=self.timeout,
+    )
+  File "C:\Users\ashwi\Desktop\mini_pro\brain_map\venv\Lib\site-packages\google\auth\transport\requests.py", line 543, in request
+    response = super(AuthorizedSession, self).request(
+        method,
+    ...<4 lines>...
+        **kwargs
+    )
+  File "C:\Users\ashwi\Desktop\mini_pro\brain_map\venv\Lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\ashwi\Desktop\mini_pro\brain_map\venv\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\ashwi\Desktop\mini_pro\brain_map\venv\Lib\site-packages\requests\adapters.py", line 532, in send
+    raise ReadTimeout(e, request=request)
+requests.exceptions.ReadTimeout: HTTPSConnectionPool(host='sheets.googleapis.com', port=443): Read timed out. (read timeout=None)
+[2026-05-28 13:04:30] [ERROR] [Sheets] Error appending to Google Sheet: HTTPSConnectionPool(host='sheets.googleapis.com', port=443): Read timed out. (read timeout=None)
+Traceback (most recent call last):
+  File "C:\Users\ashwi\Desktop\mini_pro\brain_map\venv\Lib\site-packages\urllib3\connectionpool.py", line 534, in _make_request
+    response = conn.getresponse()
+  File "C:\Users\ashwi\Desktop\mini_pro\brain_map\venv\Lib\site-packages\urllib3\connection.py", line 571, in getresponse
+    httplib_response = super().getresponse()
+  File "C:\Users\ashwi\anaconda3\Lib\http\client.py", line 1430, in getresponse
+    response.begin()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\ashwi\anaconda3\Lib\http\client.py", line 331, in begin
+    version, status, reason = self._read_status()
+                              ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ashwi\anaconda3\Lib\http\client.py", line 292, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\ashwi\anaconda3\Lib\socket.py", line 719, in readinto
+    return self._sock.recv_into(b)
+           ~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\ashwi\anaconda3\Lib\ssl.py", line 1304, in recv_into
+    return self.read(nbytes, buffer)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\ashwi\anaconda3\Lib\ssl.py", line 1138, in read
+    return self._sslobj.read(len, buffer)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+TimeoutError: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\ashwi\Desktop\mini_pro\brain_map\venv\Lib\site-packages\requests\adapters.py", line 486, in send
+    resp = conn.urlopen(
+        method=request.method,
+    ...<9 lines>...
+        chunked=chunked,
+    )
+  File "C:\Users\ashwi\Desktop\mini_pro\brain_map\venv\Lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+        method, url, error=new_e, _pool=self, _stacktrace=sys.exc_info()[2]
+    )
+  File "C:\Users\ashwi\Desktop\mini_pro\brain_map\venv\Lib\site-packages\urllib3\util\retry.py", line 490, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ashwi\Desktop\mini_pro\brain_map\venv\Lib\site-packages\urllib3\util\util.py", line 39, in reraise
+    raise value
+  File "C:\Users\ashwi\Desktop\mini_pro\brain_map\venv\Lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+        conn,
+    ...<10 lines>...
+        **response_kw,
+    )
+  File "C:\Users\ashwi\Desktop\mini_pro\brain_map\venv\Lib\site-packages\urllib3\connectionpool.py", line 536, in _make_request
+    self._raise_timeout(err=e, url=url, timeout_value=read_timeout)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ashwi\Desktop\mini_pro\brain_map\venv\Lib\site-packages\urllib3\connectionpool.py", line 367, in _raise_timeout
+    raise ReadTimeoutError(
+        self, url, f"Read timed out. (read timeout={timeout_value})"
+    ) from err
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='sheets.googleapis.com', port=443): Read timed out. (read timeout=None)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ashwi\Desktop\mini_pro\brain_map\main.py", line 338, in append_to_sheet
+    set_column_width(worksheet, chr(65 + i), width)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ashwi\Desktop\mini_pro\brain_map\venv\Lib\site-packages\gspread_formatting\functions.py", line 27, in f
+    return worksheet.spreadsheet.batch_update({'requests': func(worksheet, *args, **kwargs)})
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ashwi\Desktop\mini_pro\brain_map\venv\Lib\site-packages\gspread\spreadsheet.py", line 97, in batch_update
+    return self.client.batch_update(self.id, body)
+           ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\ashwi\Desktop\mini_pro\brain_map\venv\Lib\site-packages\gspread\http_client.py", line 134, in batch_update
+    r = self.request("post", SPREADSHEET_BATCH_UPDATE_URL % id, json=body)
+  File "C:\Users\ashwi\Desktop\mini_pro\brain_map\venv\Lib\site-packages\gspread\http_client.py", line 109, in request
+    response = self.session.request(
+        method=method,
+    ...<6 lines>...
+        timeout=self.timeout,
+    )
+  File "C:\Users\ashwi\Desktop\mini_pro\brain_map\venv\Lib\site-packages\google\auth\transport\requests.py", line 543, in request
+    response = super(AuthorizedSession, self).request(
+        method,
+    ...<4 lines>...
+        **kwargs
+    )
+  File "C:\Users\ashwi\Desktop\mini_pro\brain_map\venv\Lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\ashwi\Desktop\mini_pro\brain_map\venv\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\ashwi\Desktop\mini_pro\brain_map\venv\Lib\site-packages\requests\adapters.py", line 532, in send
+    raise ReadTimeout(e, request=request)
+requests.exceptions.ReadTimeout: HTTPSConnectionPool(host='sheets.googleapis.com', port=443): Read timed out. (read timeout=None)

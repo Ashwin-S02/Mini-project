@@ -8739,3 +8739,324 @@ google.auth.exceptions.TransportError: HTTPSConnectionPool(host='oauth2.googleap
 [2026-05-26 16:47:18] [INFO] [Activity] Scrape complete! Found 30 unique leads
 [2026-05-26 16:47:18] [INFO] [Activity] All data saved to Google Sheets
 [2026-05-26 16:47:18] [INFO] JOB f60fd948 COMPLETED: 30 unique leads scraped.
+[2026-05-28 12:38:57] [INFO] Scraper backend starting on: http://localhost:8081
+[2026-05-28 12:38:57] [INFO] Python stdout buffering: True
+[2026-05-28 12:39:21] [INFO] [Activity] Starting scrape for 'hotels' in 'bengaluru'
+[2026-05-28 12:39:31] [INFO] [Activity] Split into 9 zones for better coverage
+[2026-05-28 12:39:31] [INFO] JOB e591aaf4: 'hotels' in 'bengaluru' | Target: 50 unique | Zones: 9 | Strategy: grid
+[2026-05-28 12:39:31] [INFO] [Activity] Checking for existing data to avoid duplicates...
+[2026-05-28 12:39:31] [INFO] [Dedup] Loaded 0 existing rows (0 dedup keys) for deduplication.
+[2026-05-28 12:39:31] [INFO] [Activity] Scanning 2 zones... (need 50 more unique leads)
+[2026-05-28 12:39:50] [DEBUG] [Scroll] #5: 27 places loaded so far...
+[2026-05-28 12:39:51] [DEBUG] [Scroll] #5: 29 places loaded so far...
+[2026-05-28 12:39:55] [DEBUG] [Scroll] #10: 47 places loaded so far...
+[2026-05-28 12:39:56] [DEBUG] [Scroll] #10: 49 places loaded so far...
+[2026-05-28 12:40:01] [DEBUG] [Scroll] End of list detected at scroll 15. Total: 62 places.
+[2026-05-28 12:40:01] [INFO] [Maps] Query: "hotels near Bengaluru @12.8850,77.5139,14z" -> 62 results loaded. Extracting up to 40...
+[2026-05-28 12:40:02] [DEBUG] [Scroll] #15: 74 places loaded so far...
+[2026-05-28 12:40:07] [DEBUG] [Scroll] End of list detected at scroll 19. Total: 79 places.
+[2026-05-28 12:40:07] [INFO] [Maps] Query: "hotels near Bengaluru @12.8850,77.6220,14z" -> 79 results loaded. Extracting up to 40...
+[2026-05-28 12:41:09] [DEBUG] [Extract] 10 leads extracted...
+[2026-05-28 12:41:13] [DEBUG] [Extract] 10 leads extracted...
+[2026-05-28 12:42:13] [DEBUG] [Extract] 20 leads extracted...
+[2026-05-28 12:42:19] [DEBUG] [Extract] 20 leads extracted...
+[2026-05-28 12:43:12] [DEBUG] [Extract] 30 leads extracted...
+[2026-05-28 12:43:19] [DEBUG] [Extract] 30 leads extracted...
+[2026-05-28 12:44:11] [DEBUG] [Extract] 40 leads extracted...
+[2026-05-28 12:44:11] [INFO] [Maps] Extracted 40 leads from query: "hotels near Bengaluru @12.8850,77.5139,14z"
+[2026-05-28 12:44:16] [INFO] [Activity] Found 40 results in area near 12.8850,77.5139
+[2026-05-28 12:44:16] [INFO] [Dedup] Skipped 4 duplicates, 36 unique in this zone.
+[2026-05-28 12:44:16] [INFO] [Activity]  Filtered 4 duplicates (10% overlap)
+[2026-05-28 12:44:16] [INFO] [Activity]  Enriching 36 leads (finding emails, social links)...
+[2026-05-28 12:44:17] [DEBUG] [Extract] 40 leads extracted...
+[2026-05-28 12:44:17] [INFO] [Maps] Extracted 40 leads from query: "hotels near Bengaluru @12.8850,77.6220,14z"
+[2026-05-28 12:44:33] [DEBUG] [Enrich] Request failed for http://www.hotelgatewayinn.in: HTTPConnectionPool(host='www.hotelgatewayinn.in', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("HTTPConnection(host='www.hotelgatewayinn.in', port=80): Failed to resolve 'www.hotelgatewayinn.in' ([Errno 11001] getaddrinfo failed)"))
+[2026-05-28 12:44:33] [DEBUG] [Enrich] Request failed for http://www.hotelgatewayinn.in/contact: HTTPConnectionPool(host='www.hotelgatewayinn.in', port=80): Max retries exceeded with url: /contact (Caused by NameResolutionError("HTTPConnection(host='www.hotelgatewayinn.in', port=80): Failed to resolve 'www.hotelgatewayinn.in' ([Errno 11001] getaddrinfo failed)"))
+[2026-05-28 12:44:34] [DEBUG] [Enrich] Request failed for http://www.hotelgatewayinn.in/contact-us: HTTPConnectionPool(host='www.hotelgatewayinn.in', port=80): Max retries exceeded with url: /contact-us (Caused by NameResolutionError("HTTPConnection(host='www.hotelgatewayinn.in', port=80): Failed to resolve 'www.hotelgatewayinn.in' ([Errno 11001] getaddrinfo failed)"))
+[2026-05-28 12:44:35] [DEBUG] [Enrich] Request failed for http://www.thecurzoncourt.com: HTTPConnectionPool(host='www.thecurzoncourt.com', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("HTTPConnection(host='www.thecurzoncourt.com', port=80): Failed to resolve 'www.thecurzoncourt.com' ([Errno 11001] getaddrinfo failed)"))
+[2026-05-28 12:44:35] [DEBUG] [Enrich] Request failed for http://www.thecurzoncourt.com/contact: HTTPConnectionPool(host='www.thecurzoncourt.com', port=80): Max retries exceeded with url: /contact (Caused by NameResolutionError("HTTPConnection(host='www.thecurzoncourt.com', port=80): Failed to resolve 'www.thecurzoncourt.com' ([Errno 11001] getaddrinfo failed)"))
+[2026-05-28 12:44:35] [DEBUG] [Enrich] Request failed for http://www.thecurzoncourt.com/contact-us: HTTPConnectionPool(host='www.thecurzoncourt.com', port=80): Max retries exceeded with url: /contact-us (Caused by NameResolutionError("HTTPConnection(host='www.thecurzoncourt.com', port=80): Failed to resolve 'www.thecurzoncourt.com' ([Errno 11001] getaddrinfo failed)"))
+[2026-05-28 12:45:07] [INFO] [Activity]  Saving 36 leads...
+[2026-05-28 12:45:07] [INFO] [Local CSV] Successfully saved 36 leads to local file: scraped_leads\leads_e591aaf4.csv
+[2026-05-28 12:45:07] [INFO] [Activity]  Total leads collected: 36
+[2026-05-28 12:45:07] [INFO] [Activity] Found 40 results in area near 12.8850,77.6220
+[2026-05-28 12:45:07] [INFO] [Dedup] Skipped 31 duplicates, 9 unique in this zone.
+[2026-05-28 12:45:07] [INFO] [Activity]  Filtered 31 duplicates (78% overlap)
+[2026-05-28 12:45:07] [INFO] [Activity]  Enriching 9 leads (finding emails, social links)...
+[2026-05-28 12:45:22] [INFO] [Activity]  Saving 9 leads...
+[2026-05-28 12:45:22] [INFO] [Local CSV] Successfully saved 9 leads to local file: scraped_leads\leads_e591aaf4.csv
+[2026-05-28 12:45:22] [INFO] [Activity]  Total leads collected: 45
+[2026-05-28 12:45:22] [INFO] [Activity] Scanning 2 zones... (need 5 more unique leads)
+[2026-05-28 12:45:34] [DEBUG] [Scroll] #5: 34 places loaded so far...
+[2026-05-28 12:45:34] [DEBUG] [Scroll] #5: 34 places loaded so far...
+[2026-05-28 12:45:37] [DEBUG] [Scroll] End of list detected at scroll 8. Total: 36 places.
+[2026-05-28 12:45:37] [INFO] [Maps] Query: "hotels near Bengaluru @12.8850,77.7300,14z" -> 36 results loaded. Extracting up to 10...
+[2026-05-28 12:45:39] [DEBUG] [Scroll] #10: 54 places loaded so far...
+[2026-05-28 12:45:45] [DEBUG] [Scroll] #15: 74 places loaded so far...
+[2026-05-28 12:45:51] [DEBUG] [Scroll] #20: 94 places loaded so far...
+[2026-05-28 12:45:58] [DEBUG] [Scroll] #25: 107 places loaded so far...
+[2026-05-28 12:46:01] [DEBUG] [Scroll] End of list detected at scroll 27. Total: 120 places.
+[2026-05-28 12:46:02] [INFO] [Maps] Query: "hotels near Bengaluru @12.9881,77.5139,14z" -> 120 results loaded. Extracting up to 10...
+[2026-05-28 12:46:43] [DEBUG] [Extract] 10 leads extracted...
+[2026-05-28 12:46:43] [INFO] [Maps] Extracted 10 leads from query: "hotels near Bengaluru @12.8850,77.7300,14z"
+[2026-05-28 12:46:43] [INFO] [Activity] Found 10 results in area near 12.8850,77.7300
+[2026-05-28 12:46:43] [INFO] [Dedup] Skipped 7 duplicates, 3 unique in this zone.
+[2026-05-28 12:46:43] [INFO] [Activity]  Filtered 7 duplicates (70% overlap)
+[2026-05-28 12:46:43] [INFO] [Activity]  Enriching 3 leads (finding emails, social links)...
+[2026-05-28 12:46:49] [INFO] [Activity]  Saving 3 leads...
+[2026-05-28 12:46:49] [INFO] [Local CSV] Successfully saved 3 leads to local file: scraped_leads\leads_e591aaf4.csv
+[2026-05-28 12:46:49] [INFO] [Activity]  Total leads collected: 48
+[2026-05-28 12:47:06] [DEBUG] [Extract] 10 leads extracted...
+[2026-05-28 12:47:06] [INFO] [Maps] Extracted 10 leads from query: "hotels near Bengaluru @12.9881,77.5139,14z"
+[2026-05-28 12:47:06] [INFO] [Activity] Found 10 results in area near 12.9881,77.5139
+[2026-05-28 12:47:06] [INFO] [Activity]  Enriching 2 leads (finding emails, social links)...
+[2026-05-28 12:47:13] [DEBUG] [Enrich] Request failed for https://www.srshotels.co.in: HTTPSConnectionPool(host='www.srshotels.co.in', port=443): Read timed out. (read timeout=5)
+[2026-05-28 12:47:21] [DEBUG] [Enrich] Request failed for https://www.srshotels.co.in/contact-us: HTTPSConnectionPool(host='www.srshotels.co.in', port=443): Read timed out. (read timeout=5)
+[2026-05-28 12:47:21] [INFO] [Activity]  Saving 2 leads...
+[2026-05-28 12:47:21] [INFO] [Local CSV] Successfully saved 2 leads to local file: scraped_leads\leads_e591aaf4.csv
+[2026-05-28 12:47:21] [INFO] [Activity]  Total leads collected: 50
+[2026-05-28 12:47:21] [INFO] [Activity]  Target reached! Stopping zone processing
+[2026-05-28 12:47:21] [INFO] [Activity] Reached target! Got 50 unique leads
+[2026-05-28 12:47:21] [INFO] [Activity] Scrape complete! Found 50 unique leads
+[2026-05-28 12:47:21] [INFO] [Activity] All data saved to CSV
+[2026-05-28 12:47:21] [INFO] JOB e591aaf4 COMPLETED: 50 unique leads scraped.
+[2026-05-28 12:53:26] [INFO] [Activity] Starting scrape for 'hotels' in 'bengaluru'
+[2026-05-28 12:53:26] [INFO] [Activity] Split into 9 zones for better coverage
+[2026-05-28 12:53:26] [INFO] JOB 503e1c97: 'hotels' in 'bengaluru' | Target: 50 unique | Zones: 9 | Strategy: grid
+[2026-05-28 12:53:26] [INFO] [Activity] Checking for existing data to avoid duplicates...
+[2026-05-28 12:53:45] [WARNING] [Sheets] Failed to open sheet by key, falling back to name 'int': {'code': 503, 'message': 'The service is currently unavailable.', 'status': 'UNAVAILABLE'}
+[2026-05-28 12:53:51] [INFO] [Dedup] Loaded 29 existing rows (57 dedup keys) for deduplication.
+[2026-05-28 12:53:51] [INFO] [Activity] Scanning 2 zones... (need 50 more unique leads)
+[2026-05-28 12:54:04] [DEBUG] [Scroll] #5: 22 places loaded so far...
+[2026-05-28 12:54:07] [DEBUG] [Scroll] #5: 22 places loaded so far...
+[2026-05-28 12:54:10] [DEBUG] [Scroll] #10: 42 places loaded so far...
+[2026-05-28 12:54:12] [DEBUG] [Scroll] End of list detected at scroll 10. Total: 42 places.
+[2026-05-28 12:54:12] [INFO] [Maps] Query: "hotels near Bengaluru @12.8850,77.5139,14z" -> 42 results loaded. Extracting up to 40...
+[2026-05-28 12:54:16] [DEBUG] [Scroll] #15: 62 places loaded so far...
+[2026-05-28 12:54:21] [DEBUG] [Scroll] #20: 76 places loaded so far...
+[2026-05-28 12:54:27] [DEBUG] [Scroll] End of list detected at scroll 25. Total: 82 places.
+[2026-05-28 12:54:27] [INFO] [Maps] Query: "hotels near Bengaluru @12.8850,77.6220,14z" -> 82 results loaded. Extracting up to 40...
+[2026-05-28 12:55:27] [DEBUG] [Extract] 10 leads extracted...
+[2026-05-28 12:55:44] [DEBUG] [Extract] 10 leads extracted...
+[2026-05-28 12:56:28] [DEBUG] [Extract] 20 leads extracted...
+[2026-05-28 12:56:46] [DEBUG] [Extract] 20 leads extracted...
+[2026-05-28 12:57:31] [DEBUG] [Extract] 30 leads extracted...
+[2026-05-28 12:59:04] [DEBUG] [Extract] 30 leads extracted...
+[2026-05-28 12:59:53] [ERROR] [Zone] Failed to extract https://www.google.com/maps/place/Bloomrooms+@+City+Centre/data=!4m10!3m9!1s0x3bae1669e1d52c2d:0xc0a92956ebd3679e!5m2!4m1!1i2!8m2!3d12.9901634!4d77.5948394!16s%2Fg%2F11j1m17rmz!19sChIJLSzV4WkWrjsRnmfT61YpqcA?authuser=0&hl=en&rclk=1: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://www.google.com/maps/place/Bloomrooms+@+City+Centre/data=!4m10!3m9!1s0x3bae1669e1d52c2d:0xc0a92956ebd3679e!5m2!4m1!1i2!8m2!3d12.9901634!4d77.5948394!16s%2Fg%2F11j1m17rmz!19sChIJLSzV4WkWrjsRnmfT61YpqcA?authuser=0&hl=en&rclk=1", waiting until "domcontentloaded"
+
+[2026-05-28 13:00:03] [DEBUG] [Extract] 40 leads extracted...
+[2026-05-28 13:00:03] [INFO] [Maps] Extracted 40 leads from query: "hotels near Bengaluru @12.8850,77.6220,14z"
+[2026-05-28 13:00:13] [DEBUG] [Extract] 40 leads extracted...
+[2026-05-28 13:00:13] [INFO] [Maps] Extracted 40 leads from query: "hotels near Bengaluru @12.8850,77.5139,14z"
+[2026-05-28 13:00:29] [INFO] [Activity] Found 40 results in area near 12.8850,77.6220
+[2026-05-28 13:00:30] [INFO] [Dedup] Skipped 1 duplicates, 39 unique in this zone.
+[2026-05-28 13:00:30] [INFO] [Activity]  Filtered 1 duplicates (2% overlap)
+[2026-05-28 13:00:30] [INFO] [Activity]  Enriching 39 leads (finding emails, social links)...
+[2026-05-28 13:01:30] [DEBUG] [Enrich] Request failed for http://www.irishotel.biz/contact-us: ('Connection aborted.', ConnectionAbortedError(10053, 'An established connection was aborted by the software in your host machine', None, 10053, None))
+[2026-05-28 13:01:47] [DEBUG] [Enrich] Request failed for http://www.hotelgatewayinn.in: HTTPConnectionPool(host='www.hotelgatewayinn.in', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("HTTPConnection(host='www.hotelgatewayinn.in', port=80): Failed to resolve 'www.hotelgatewayinn.in' ([Errno 11001] getaddrinfo failed)"))
+[2026-05-28 13:01:47] [DEBUG] [Enrich] Request failed for http://www.hotelgatewayinn.in/contact: HTTPConnectionPool(host='www.hotelgatewayinn.in', port=80): Max retries exceeded with url: /contact (Caused by NameResolutionError("HTTPConnection(host='www.hotelgatewayinn.in', port=80): Failed to resolve 'www.hotelgatewayinn.in' ([Errno 11001] getaddrinfo failed)"))
+[2026-05-28 13:01:47] [DEBUG] [Enrich] Request failed for http://www.hotelgatewayinn.in/contact-us: HTTPConnectionPool(host='www.hotelgatewayinn.in', port=80): Max retries exceeded with url: /contact-us (Caused by NameResolutionError("HTTPConnection(host='www.hotelgatewayinn.in', port=80): Failed to resolve 'www.hotelgatewayinn.in' ([Errno 11001] getaddrinfo failed)"))
+[2026-05-28 13:01:47] [DEBUG] [Enrich] Request failed for http://www.thecurzoncourt.com: HTTPConnectionPool(host='www.thecurzoncourt.com', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("HTTPConnection(host='www.thecurzoncourt.com', port=80): Failed to resolve 'www.thecurzoncourt.com' ([Errno 11001] getaddrinfo failed)"))
+[2026-05-28 13:01:47] [DEBUG] [Enrich] Request failed for http://www.thecurzoncourt.com/contact: HTTPConnectionPool(host='www.thecurzoncourt.com', port=80): Max retries exceeded with url: /contact (Caused by NameResolutionError("HTTPConnection(host='www.thecurzoncourt.com', port=80): Failed to resolve 'www.thecurzoncourt.com' ([Errno 11001] getaddrinfo failed)"))
+[2026-05-28 13:01:47] [DEBUG] [Enrich] Request failed for http://www.thecurzoncourt.com/contact-us: HTTPConnectionPool(host='www.thecurzoncourt.com', port=80): Max retries exceeded with url: /contact-us (Caused by NameResolutionError("HTTPConnection(host='www.thecurzoncourt.com', port=80): Failed to resolve 'www.thecurzoncourt.com' ([Errno 11001] getaddrinfo failed)"))
+[2026-05-28 13:02:10] [INFO] [Activity]  Saving 39 leads...
+[2026-05-28 13:03:04] [ERROR] [Sheets] Error appending to Google Sheet: HTTPSConnectionPool(host='sheets.googleapis.com', port=443): Read timed out. (read timeout=None)
+Traceback (most recent call last):
+  File "C:\Users\ashwi\Desktop\mini_pro\brain_map\venv\Lib\site-packages\urllib3\connectionpool.py", line 534, in _make_request
+    response = conn.getresponse()
+  File "C:\Users\ashwi\Desktop\mini_pro\brain_map\venv\Lib\site-packages\urllib3\connection.py", line 571, in getresponse
+    httplib_response = super().getresponse()
+  File "C:\Users\ashwi\anaconda3\Lib\http\client.py", line 1430, in getresponse
+    response.begin()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\ashwi\anaconda3\Lib\http\client.py", line 331, in begin
+    version, status, reason = self._read_status()
+                              ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ashwi\anaconda3\Lib\http\client.py", line 292, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\ashwi\anaconda3\Lib\socket.py", line 719, in readinto
+    return self._sock.recv_into(b)
+           ~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\ashwi\anaconda3\Lib\ssl.py", line 1304, in recv_into
+    return self.read(nbytes, buffer)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\ashwi\anaconda3\Lib\ssl.py", line 1138, in read
+    return self._sslobj.read(len, buffer)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+TimeoutError: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\ashwi\Desktop\mini_pro\brain_map\venv\Lib\site-packages\requests\adapters.py", line 486, in send
+    resp = conn.urlopen(
+        method=request.method,
+    ...<9 lines>...
+        chunked=chunked,
+    )
+  File "C:\Users\ashwi\Desktop\mini_pro\brain_map\venv\Lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+        method, url, error=new_e, _pool=self, _stacktrace=sys.exc_info()[2]
+    )
+  File "C:\Users\ashwi\Desktop\mini_pro\brain_map\venv\Lib\site-packages\urllib3\util\retry.py", line 490, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ashwi\Desktop\mini_pro\brain_map\venv\Lib\site-packages\urllib3\util\util.py", line 39, in reraise
+    raise value
+  File "C:\Users\ashwi\Desktop\mini_pro\brain_map\venv\Lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+        conn,
+    ...<10 lines>...
+        **response_kw,
+    )
+  File "C:\Users\ashwi\Desktop\mini_pro\brain_map\venv\Lib\site-packages\urllib3\connectionpool.py", line 536, in _make_request
+    self._raise_timeout(err=e, url=url, timeout_value=read_timeout)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ashwi\Desktop\mini_pro\brain_map\venv\Lib\site-packages\urllib3\connectionpool.py", line 367, in _raise_timeout
+    raise ReadTimeoutError(
+        self, url, f"Read timed out. (read timeout={timeout_value})"
+    ) from err
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='sheets.googleapis.com', port=443): Read timed out. (read timeout=None)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ashwi\Desktop\mini_pro\brain_map\main.py", line 338, in append_to_sheet
+    set_column_width(worksheet, chr(65 + i), width)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ashwi\Desktop\mini_pro\brain_map\venv\Lib\site-packages\gspread_formatting\functions.py", line 27, in f
+    return worksheet.spreadsheet.batch_update({'requests': func(worksheet, *args, **kwargs)})
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ashwi\Desktop\mini_pro\brain_map\venv\Lib\site-packages\gspread\spreadsheet.py", line 97, in batch_update
+    return self.client.batch_update(self.id, body)
+           ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\ashwi\Desktop\mini_pro\brain_map\venv\Lib\site-packages\gspread\http_client.py", line 134, in batch_update
+    r = self.request("post", SPREADSHEET_BATCH_UPDATE_URL % id, json=body)
+  File "C:\Users\ashwi\Desktop\mini_pro\brain_map\venv\Lib\site-packages\gspread\http_client.py", line 109, in request
+    response = self.session.request(
+        method=method,
+    ...<6 lines>...
+        timeout=self.timeout,
+    )
+  File "C:\Users\ashwi\Desktop\mini_pro\brain_map\venv\Lib\site-packages\google\auth\transport\requests.py", line 543, in request
+    response = super(AuthorizedSession, self).request(
+        method,
+    ...<4 lines>...
+        **kwargs
+    )
+  File "C:\Users\ashwi\Desktop\mini_pro\brain_map\venv\Lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\ashwi\Desktop\mini_pro\brain_map\venv\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\ashwi\Desktop\mini_pro\brain_map\venv\Lib\site-packages\requests\adapters.py", line 532, in send
+    raise ReadTimeout(e, request=request)
+requests.exceptions.ReadTimeout: HTTPSConnectionPool(host='sheets.googleapis.com', port=443): Read timed out. (read timeout=None)
+[2026-05-28 13:03:08] [INFO] [Local CSV] Successfully saved 39 leads to local file: scraped_leads\leads_503e1c97.csv
+[2026-05-28 13:03:08] [INFO] [Activity]  Total leads collected: 39
+[2026-05-28 13:03:08] [INFO] [Activity] Found 40 results in area near 12.8850,77.5139
+[2026-05-28 13:03:08] [INFO] [Dedup] Skipped 19 duplicates, 21 unique in this zone.
+[2026-05-28 13:03:08] [INFO] [Activity]  Filtered 19 duplicates (48% overlap)
+[2026-05-28 13:03:08] [INFO] [Activity]  Enriching 11 leads (finding emails, social links)...
+[2026-05-28 13:03:22] [INFO] [Activity]  Saving 11 leads...
+[2026-05-28 13:04:30] [ERROR] [Sheets] Error appending to Google Sheet: HTTPSConnectionPool(host='sheets.googleapis.com', port=443): Read timed out. (read timeout=None)
+Traceback (most recent call last):
+  File "C:\Users\ashwi\Desktop\mini_pro\brain_map\venv\Lib\site-packages\urllib3\connectionpool.py", line 534, in _make_request
+    response = conn.getresponse()
+  File "C:\Users\ashwi\Desktop\mini_pro\brain_map\venv\Lib\site-packages\urllib3\connection.py", line 571, in getresponse
+    httplib_response = super().getresponse()
+  File "C:\Users\ashwi\anaconda3\Lib\http\client.py", line 1430, in getresponse
+    response.begin()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\ashwi\anaconda3\Lib\http\client.py", line 331, in begin
+    version, status, reason = self._read_status()
+                              ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ashwi\anaconda3\Lib\http\client.py", line 292, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\ashwi\anaconda3\Lib\socket.py", line 719, in readinto
+    return self._sock.recv_into(b)
+           ~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\ashwi\anaconda3\Lib\ssl.py", line 1304, in recv_into
+    return self.read(nbytes, buffer)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\ashwi\anaconda3\Lib\ssl.py", line 1138, in read
+    return self._sslobj.read(len, buffer)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+TimeoutError: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\ashwi\Desktop\mini_pro\brain_map\venv\Lib\site-packages\requests\adapters.py", line 486, in send
+    resp = conn.urlopen(
+        method=request.method,
+    ...<9 lines>...
+        chunked=chunked,
+    )
+  File "C:\Users\ashwi\Desktop\mini_pro\brain_map\venv\Lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+        method, url, error=new_e, _pool=self, _stacktrace=sys.exc_info()[2]
+    )
+  File "C:\Users\ashwi\Desktop\mini_pro\brain_map\venv\Lib\site-packages\urllib3\util\retry.py", line 490, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ashwi\Desktop\mini_pro\brain_map\venv\Lib\site-packages\urllib3\util\util.py", line 39, in reraise
+    raise value
+  File "C:\Users\ashwi\Desktop\mini_pro\brain_map\venv\Lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+        conn,
+    ...<10 lines>...
+        **response_kw,
+    )
+  File "C:\Users\ashwi\Desktop\mini_pro\brain_map\venv\Lib\site-packages\urllib3\connectionpool.py", line 536, in _make_request
+    self._raise_timeout(err=e, url=url, timeout_value=read_timeout)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ashwi\Desktop\mini_pro\brain_map\venv\Lib\site-packages\urllib3\connectionpool.py", line 367, in _raise_timeout
+    raise ReadTimeoutError(
+        self, url, f"Read timed out. (read timeout={timeout_value})"
+    ) from err
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='sheets.googleapis.com', port=443): Read timed out. (read timeout=None)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ashwi\Desktop\mini_pro\brain_map\main.py", line 338, in append_to_sheet
+    set_column_width(worksheet, chr(65 + i), width)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ashwi\Desktop\mini_pro\brain_map\venv\Lib\site-packages\gspread_formatting\functions.py", line 27, in f
+    return worksheet.spreadsheet.batch_update({'requests': func(worksheet, *args, **kwargs)})
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ashwi\Desktop\mini_pro\brain_map\venv\Lib\site-packages\gspread\spreadsheet.py", line 97, in batch_update
+    return self.client.batch_update(self.id, body)
+           ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\ashwi\Desktop\mini_pro\brain_map\venv\Lib\site-packages\gspread\http_client.py", line 134, in batch_update
+    r = self.request("post", SPREADSHEET_BATCH_UPDATE_URL % id, json=body)
+  File "C:\Users\ashwi\Desktop\mini_pro\brain_map\venv\Lib\site-packages\gspread\http_client.py", line 109, in request
+    response = self.session.request(
+        method=method,
+    ...<6 lines>...
+        timeout=self.timeout,
+    )
+  File "C:\Users\ashwi\Desktop\mini_pro\brain_map\venv\Lib\site-packages\google\auth\transport\requests.py", line 543, in request
+    response = super(AuthorizedSession, self).request(
+        method,
+    ...<4 lines>...
+        **kwargs
+    )
+  File "C:\Users\ashwi\Desktop\mini_pro\brain_map\venv\Lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\ashwi\Desktop\mini_pro\brain_map\venv\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\ashwi\Desktop\mini_pro\brain_map\venv\Lib\site-packages\requests\adapters.py", line 532, in send
+    raise ReadTimeout(e, request=request)
+requests.exceptions.ReadTimeout: HTTPSConnectionPool(host='sheets.googleapis.com', port=443): Read timed out. (read timeout=None)
+[2026-05-28 13:04:30] [INFO] [Local CSV] Successfully saved 11 leads to local file: scraped_leads\leads_503e1c97.csv
+[2026-05-28 13:04:30] [INFO] [Activity]  Total leads collected: 50
+[2026-05-28 13:04:30] [INFO] [Activity]  Target reached! Stopping zone processing
+[2026-05-28 13:04:30] [INFO] [Activity] Reached target! Got 50 unique leads
+[2026-05-28 13:04:30] [INFO] [Activity] Scrape complete! Found 50 unique leads
+[2026-05-28 13:04:30] [INFO] [Activity] All data saved to Google Sheets
+[2026-05-28 13:04:30] [INFO] JOB 503e1c97 COMPLETED: 50 unique leads scraped.
